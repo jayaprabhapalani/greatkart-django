@@ -38,7 +38,7 @@ def register(request):
             user.phone_number=phone_number # not in create user(from account manager) so manually creating here
             user.save()
             
-            #uUSER ACTIVATION
+            #USER ACTIVATION
             current_site=get_current_site(request)
             mail_subject='Please activate your account'
             message=render_to_string('accounts/account_verification_email.html',{
